@@ -239,9 +239,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52c6ee223a8866f408f97b2eec0fd66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TestItem:
-  - {fileID: 6071677013234478475, guid: 50783d1a3b55a534aa5394f8ef408167, type: 3}
+  ItemTable:
+  - ItemPrefab: {fileID: 6071677013234478475, guid: 50783d1a3b55a534aa5394f8ef408167, type: 3}
+    DropChance: 50
   Radius: 3.99
+  period: 1
 --- !u!4 &397622134
 Transform:
   m_ObjectHideFlags: 0

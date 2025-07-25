@@ -4,13 +4,23 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public GameObject[] TestItem;
+    public List<Item> ItemTable = new List<Item>(); 
     public float Radius = 1;
+    private float timer;
+    public float period = 1;
 
     void Spawn() 
     {
         Vector3 RandomPosition = Random.insideUnitCircle * Radius;
-        Instantiate(TestItem[Random.Range(0, TestItem.Length)], RandomPosition, Quaternion.identity);
+        foreach (Item item in ItemTable) 
+        {
+            if(Random.Range(0f, 100f) <= item.DropChance) 
+            {
+                Instantiate(item.ItemPrefab, RandomPosition, Quaternion.identity);
+                break;
+            }
+        }
+        //Instantiate(Item[Random.Range(0, Item.Length)], RandomPosition, Quaternion.identity);
     }
 
     private void OnDrawGizmos()
@@ -21,8 +31,10 @@ public class Spawner : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        timer += Time.deltaTime;
+        if (timer > period)
         {
+            timer = 0;
             Spawn();
         }
     }
