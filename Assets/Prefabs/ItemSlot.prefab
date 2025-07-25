@@ -32,8 +32,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3313247685115145626}
-  - {fileID: 1768734036004330415}
   - {fileID: 6265787896707698971}
+  - {fileID: 1768734036004330415}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -97,6 +97,7 @@ MonoBehaviour:
   isFull: 0
   itemDescription: 
   emptySprite: {fileID: 0}
+  maxNumberOfItems: 8
   quantityText: {fileID: 956053026144732173}
   itemImgae: {fileID: 2023966157848290415}
   itemDescriptionImage: {fileID: 0}
