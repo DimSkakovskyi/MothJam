@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public List<Item> ItemTable = new List<Item>(); 
+    public List<ItemToSpawn> ItemTable = new List<ItemToSpawn>(); 
     public float Radius = 1;
     private float timer;
     public float period = 1;
@@ -12,7 +12,7 @@ public class Spawner : MonoBehaviour
     void Spawn() 
     {
         Vector3 RandomPosition = Random.insideUnitCircle * Radius;
-        foreach (Item item in ItemTable) 
+        foreach (ItemToSpawn item in ItemTable) 
         {
             if(Random.Range(0f, 100f) <= item.DropChance) 
             {
