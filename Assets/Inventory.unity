@@ -879,6 +879,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CollectableTestItem (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5552167261355438828, guid: b4f763e3ebd9fa541a96ec624dd11842, type: 3}
+      propertyPath: quantity
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3135,14 +3139,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CollectableTestItem
       objectReference: {fileID: 0}
-    - target: {fileID: 5552167261355438828, guid: b4f763e3ebd9fa541a96ec624dd11842, type: 3}
-      propertyPath: quantity
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5714159173047236058, guid: b4f763e3ebd9fa541a96ec624dd11842, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3995,6 +3991,6 @@ SceneRoots:
   - {fileID: 113532463}
   - {fileID: 568143279}
   - {fileID: 1845117440}
-  - {fileID: 1535730500}
   - {fileID: 1272235062}
+  - {fileID: 1535730500}
   - {fileID: 368677582}

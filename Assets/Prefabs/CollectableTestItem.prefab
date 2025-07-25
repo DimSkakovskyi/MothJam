@@ -176,6 +176,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: DarkBox
-  quantity: 2
+  quantity: 7
   sprite: {fileID: 21300000, guid: 6e74ea5c71689a9439742deb19bdc157, type: 3}
   itemDescription: Just a funny picture for test purposes
