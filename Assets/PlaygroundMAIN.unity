@@ -2493,6 +2493,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 512880269}
   m_CullTransparentMesh: 1
+--- !u!1 &545450222
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 545450223}
+  m_Layer: 0
+  m_Name: EggPoint1
+  m_TagString: Untagged
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &545450223
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545450222}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -40, y: -20, z: -0.39978364}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &633567610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3183,6 +3214,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4105810788468654557, guid: fe1537b6a9dd86a41b45feb9d416edc6, type: 3}
+      propertyPath: calories
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6626501184350817365, guid: fe1537b6a9dd86a41b45feb9d416edc6, type: 3}
       propertyPath: m_Name
       value: Leaf
@@ -7561,6 +7596,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3242020262019564768, guid: ccb327859e7a0724693d45d86c62db33, type: 3}
   m_PrefabInstance: {fileID: 2030778538}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2044508959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2044508960}
+  m_Layer: 0
+  m_Name: EggPoint2
+  m_TagString: Untagged
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2044508960
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044508959}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -20, y: -20, z: -0.39978364}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2064585599
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8053,3 +8119,5 @@ SceneRoots:
   - {fileID: 1010053684}
   - {fileID: 766215617}
   - {fileID: 406572386}
+  - {fileID: 545450223}
+  - {fileID: 2044508960}

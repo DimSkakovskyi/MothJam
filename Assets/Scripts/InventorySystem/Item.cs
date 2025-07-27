@@ -8,6 +8,9 @@ public class Item : MonoBehaviour
     private string itemName;
 
     [SerializeField]
+    private string calories;
+
+    [SerializeField]
     private int quantity;
 
     [SerializeField]
