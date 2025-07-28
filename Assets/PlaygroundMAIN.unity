@@ -2791,6 +2791,100 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &569385745
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 569385749}
+  - component: {fileID: 569385748}
+  - component: {fileID: 569385746}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!70 &569385746
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569385745}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 4.999998, y: 12.25089}
+  m_Size: {x: 60.00003, y: 42.501385}
+  m_Direction: 1
+--- !u!114 &569385748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569385745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52c6ee223a8866f408f97b2eec0fd66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemTable:
+  - ItemPrefab: {fileID: 6619021265272144757, guid: b75e5038c3642034181379d37362590d, type: 3}
+    DropChance: 26.1
+  - ItemPrefab: {fileID: 6626501184350817365, guid: fe1537b6a9dd86a41b45feb9d416edc6, type: 3}
+    DropChance: 26.1
+  - ItemPrefab: {fileID: 4102549356123074644, guid: b8e8d9cf542f7b94888100dcf6375db2, type: 3}
+    DropChance: 26.1
+  - ItemPrefab: {fileID: 125623402690471607, guid: ff6ac40745b7abf4ab167c6fbed7d4e1, type: 3}
+    DropChance: 26.1
+  - ItemPrefab: {fileID: 5425350564146566102, guid: 67a49c90b646e1d41964349d079a97b4, type: 3}
+    DropChance: 100
+  Radius: 2
+  Width: 41
+  period: 1
+--- !u!4 &569385749
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569385745}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 24.2, y: 0.10000038, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &604991679
 GameObject:
   m_ObjectHideFlags: 0
@@ -9129,3 +9223,4 @@ SceneRoots:
   - {fileID: 1471592253}
   - {fileID: 1297803020}
   - {fileID: 804111744}
+  - {fileID: 569385749}
