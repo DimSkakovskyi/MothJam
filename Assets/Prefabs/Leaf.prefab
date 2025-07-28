@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Leaf
+  calories: 10
   quantity: 1
   sprite: {fileID: 21300000, guid: 531bd2196f6139c48b046732de20c582, type: 3}
   itemDescription: Just a leaf. Quite delicious
