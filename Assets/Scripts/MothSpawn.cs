@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class MothSpawner : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class MothSpawner : MonoBehaviour
     public Transform[] spawnPoints;
 
     private InventoryManager inventory;
+    private HashSet<Transform> occupiedPoints = new HashSet<Transform>(); // ¬≥дстеженн€ зайн€тих точок
 
     private void Start()
     {
@@ -37,18 +39,31 @@ public class MothSpawner : MonoBehaviour
                 // якщо знайшли в≥дпов≥дний префаб Ч спавнимо
                 if (prefabToSpawn != null)
                 {
-                    // ¬ипадкова точка спавну
-                    int index = Random.Range(0, spawnPoints.Length);
-                    Instantiate(prefabToSpawn, spawnPoints[index].position, Quaternion.identity);
+                    Transform freePoint = GetFreeSpawnPoint();
 
-                    // «меншити к≥льк≥сть у слот≥
-                    slot.quantity--;
+                    if (freePoint != null)
+                    {
+                        // —творюЇмо моль
+                        GameObject mothObj = Instantiate(prefabToSpawn, freePoint.position, Quaternion.identity);
 
-                    // якщо слот порожн≥й Ч очистити його (опц≥йно)
-                    if (slot.quantity == 0)
-                        inventory.DeleteItem(i); // або вручну: slot.itemName = "", тощо
+                        // ѕрив'€зка точки до мол≥
+                        Moth mothScript = mothObj.GetComponent<Moth>();
+                        mothScript.SetSpawnPoint(freePoint, this);
 
-                    return; // «робили спавн Ч виходимо
+                        occupiedPoints.Add(freePoint); // ѕозначаЇмо точку €к зайн€ту
+
+                        // «меншити к≥льк≥сть у слот≥
+                        slot.quantity--;
+                        if (slot.quantity == 0)
+                            inventory.DeleteItem(i);
+
+                        return; // «робили спавн Ч виходимо
+                    }
+                    else
+                    {
+                        Debug.Log("No free spawn points available.");
+                        return;
+                    }
                 }
             }
         }
@@ -56,4 +71,40 @@ public class MothSpawner : MonoBehaviour
         Debug.Log("No suitable egg found in inventory.");
     }
 
+    private Transform GetFreeSpawnPoint()
+    {
+        // ¬ибираЇмо випадкову в≥льну точку
+        List<Transform> freePoints = new List<Transform>();
+        foreach (var point in spawnPoints)
+        {
+            if (!occupiedPoints.Contains(point))
+                freePoints.Add(point);
+        }
+
+        if (freePoints.Count > 0)
+            return freePoints[Random.Range(0, freePoints.Count)];
+
+        return null; // якщо в≥льних точок немаЇ
+    }
+
+    // ћетод дл€ зв≥льненн€ точки (викликаЇтьс€ з Moth)
+    public void FreeSpawnPoint(Transform point)
+    {
+        if (occupiedPoints.Contains(point))
+            occupiedPoints.Remove(point);
+    }
+
+#if UNITY_EDITOR
+    // ¬≥зуал≥зац≥€ точок у Scene View (зелен≥ Ч в≥льн≥, червон≥ Ч зайн€т≥)
+    private void OnDrawGizmos()
+    {
+        if (spawnPoints == null) return;
+
+        foreach (var point in spawnPoints)
+        {
+            Gizmos.color = occupiedPoints != null && occupiedPoints.Contains(point) ? Color.red : Color.green;
+            Gizmos.DrawSphere(point.position, 0.2f);
+        }
+    }
+#endif
 }

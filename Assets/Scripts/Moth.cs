@@ -21,25 +21,32 @@ public class Moth : MonoBehaviour
     [SerializeField] private GameObject[] stages; // Egg, Warm, cocon, Moth
 
     private int currentStage = 0;
-
-    [SerializeField] private List<Transform> availablePlaces;
     private bool isEvolutionCompleted = false;
+
+    private List<Transform> availablePlaces = new List<Transform>();
+
+    // Прив'язка до точки спавну
+    private Transform spawnPoint;
+    private MothSpawner spawner;
+
+    public void SetSpawnPoint(Transform point, MothSpawner spawnerReference)
+    {
+        spawnPoint = point;
+        spawner = spawnerReference;
+    }
 
     void Start()
     {
         // Знаходимо всі об'єкти з тегом "LivingPoint"
         GameObject[] foundPoints = GameObject.FindGameObjectsWithTag("LivingPoint");
-
-        // Додаємо їх Transform у список availablePlaces
         foreach (GameObject point in foundPoints)
-        {
             availablePlaces.Add(point.transform);
-        }
+
         // Вимкнути всі стадії, крім першої
         for (int i = 0; i < stages.Length; i++)
             stages[i].SetActive(i == 0);
 
-        // Знайти відповідні об'єкти
+        // Знайти відповідні об'єкти UI
         if (mothFood == "Leaf")
             hungryLeaf = transform.Find("hungry leaf")?.gameObject;
         else if (mothFood == "Wax")
@@ -58,8 +65,9 @@ public class Moth : MonoBehaviour
     {
         if (isEvolutionCompleted)
         {
-            isEvolutionCompleted = false; // щоб не повторювати
-            FindPlace();
+            isEvolutionCompleted = false;
+            FreeSpawnPoint(); // Звільняємо точку спавну
+            FindPlace();      // Переміщуємо моль на вільну точку
         }
     }
 
@@ -75,7 +83,6 @@ public class Moth : MonoBehaviour
         Transform chosenPlace = availablePlaces[randomIndex];
 
         transform.position = chosenPlace.position;
-
         float randomYRotation = Random.Range(0f, 360f);
         transform.rotation = Quaternion.Euler(0, randomYRotation, 0);
     }
@@ -130,10 +137,11 @@ public class Moth : MonoBehaviour
 
                                 // Запускаємо таймер голоду знову
                                 StartCoroutine(WaitUntilHungry());
-                            } else
+                            }
+                            else
                             {
                                 isEvolutionCompleted = true;
-                                stage = 4;
+                                stage = 4; // Повністю еволюціонувала
                             }
                         }
 
@@ -142,5 +150,20 @@ public class Moth : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void FreeSpawnPoint()
+    {
+        if (spawner != null && spawnPoint != null)
+        {
+            spawner.FreeSpawnPoint(spawnPoint);
+            spawnPoint = null;
+        }
+    }
+
+    private void OnDestroy()
+    {
+        // Якщо моль знищується — звільняємо точку спавну
+        FreeSpawnPoint();
     }
 }

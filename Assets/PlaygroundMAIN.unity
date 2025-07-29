@@ -236,7 +236,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!224 &26591136
 RectTransform:
@@ -390,6 +390,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bag (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3478102835979430839, guid: 3237e16b3fbec6045b3579b66e7ad365, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5822042992438096796, guid: 3237e16b3fbec6045b3579b66e7ad365, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.15
@@ -534,6 +538,10 @@ PrefabInstance:
     - target: {fileID: 6685232041616213084, guid: ccb327859e7a0724693d45d86c62db33, type: 3}
       propertyPath: m_Name
       value: bottle (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6685232041616213084, guid: ccb327859e7a0724693d45d86c62db33, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2484,6 +2492,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bottle (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6685232041616213084, guid: ccb327859e7a0724693d45d86c62db33, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2785,7 +2797,7 @@ Transform:
   m_GameObject: {fileID: 545450222}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -40, y: -20, z: -0.39978364}
+  m_LocalPosition: {x: -40, y: -20, z: 0.39978364}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3375,6 +3387,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bag (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3478102835979430839, guid: 3237e16b3fbec6045b3579b66e7ad365, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5822042992438096796, guid: 3237e16b3fbec6045b3579b66e7ad365, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.15
@@ -3484,6 +3500,10 @@ PrefabInstance:
     - target: {fileID: 3478102835979430839, guid: 3237e16b3fbec6045b3579b66e7ad365, type: 3}
       propertyPath: m_Name
       value: bag (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3478102835979430839, guid: 3237e16b3fbec6045b3579b66e7ad365, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5822042992438096796, guid: 3237e16b3fbec6045b3579b66e7ad365, type: 3}
       propertyPath: m_LocalScale.x
@@ -3702,6 +3722,10 @@ PrefabInstance:
     - target: {fileID: 3478102835979430839, guid: 3237e16b3fbec6045b3579b66e7ad365, type: 3}
       propertyPath: m_Name
       value: bag (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3478102835979430839, guid: 3237e16b3fbec6045b3579b66e7ad365, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5822042992438096796, guid: 3237e16b3fbec6045b3579b66e7ad365, type: 3}
       propertyPath: m_LocalScale.x
@@ -3948,6 +3972,10 @@ PrefabInstance:
     - target: {fileID: 6685232041616213084, guid: ccb327859e7a0724693d45d86c62db33, type: 3}
       propertyPath: m_Name
       value: bottle (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6685232041616213084, guid: ccb327859e7a0724693d45d86c62db33, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4382,6 +4410,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bottle (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6685232041616213084, guid: ccb327859e7a0724693d45d86c62db33, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4535,7 +4567,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1010053684}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Trash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4551,7 +4583,7 @@ Transform:
   m_GameObject: {fileID: 1010053683}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.0891092, y: 0.20634851, z: 8.425129}
+  m_LocalPosition: {x: -1.0891092, y: 0.20634851, z: 15.175129}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7703,6 +7735,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bag (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3478102835979430839, guid: 3237e16b3fbec6045b3579b66e7ad365, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5822042992438096796, guid: 3237e16b3fbec6045b3579b66e7ad365, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.15
@@ -7816,6 +7852,10 @@ PrefabInstance:
     - target: {fileID: 6685232041616213084, guid: ccb327859e7a0724693d45d86c62db33, type: 3}
       propertyPath: m_Name
       value: bottle (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6685232041616213084, guid: ccb327859e7a0724693d45d86c62db33, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8097,6 +8137,10 @@ PrefabInstance:
     - target: {fileID: 3478102835979430839, guid: 3237e16b3fbec6045b3579b66e7ad365, type: 3}
       propertyPath: m_Name
       value: bag (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3478102835979430839, guid: 3237e16b3fbec6045b3579b66e7ad365, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5822042992438096796, guid: 3237e16b3fbec6045b3579b66e7ad365, type: 3}
       propertyPath: m_LocalScale.x
@@ -8680,6 +8724,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bottle (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6685232041616213084, guid: ccb327859e7a0724693d45d86c62db33, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9072,6 +9120,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bag
       objectReference: {fileID: 0}
+    - target: {fileID: 3478102835979430839, guid: 3237e16b3fbec6045b3579b66e7ad365, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5822042992438096796, guid: 3237e16b3fbec6045b3579b66e7ad365, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.15
@@ -9185,6 +9237,10 @@ PrefabInstance:
     - target: {fileID: 6685232041616213084, guid: ccb327859e7a0724693d45d86c62db33, type: 3}
       propertyPath: m_Name
       value: bottle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6685232041616213084, guid: ccb327859e7a0724693d45d86c62db33, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
